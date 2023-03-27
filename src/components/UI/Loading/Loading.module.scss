@@ -1,0 +1,91 @@
+@import './../../../assets/styles/variables';
+
+.loading {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   margin: 5% 0;
+
+   .load {
+      height: 40px;
+      width: 40px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-animation: rotate 5s linear infinite;
+      animation: rotate 5s linear infinite;
+
+      .part {
+         height: 50%;
+         width: 50%;
+         background-color: $blue;
+         -webkit-animation: animate 0.6s ease-in-out infinite alternate;
+         animation: animate 0.6s ease-in-out infinite alternate;
+      }
+
+      .one {
+         border-radius: 100% 0 0 0;
+         -webkit-transform-origin: bottom right;
+         -ms-transform-origin: bottom right;
+         transform-origin: bottom right;
+       }
+       .two {
+         border-radius: 0 100% 0 0;
+         -webkit-transform-origin: bottom left;
+         -ms-transform-origin: bottom left;
+         transform-origin: bottom left;
+         -webkit-animation-delay: 0.2s;
+         animation-delay: 0.2s;
+       }
+       .three {
+         border-radius: 0 0 0 100%;
+         -webkit-transform-origin: top right;
+         -ms-transform-origin: top right;
+         transform-origin: top right;
+         -webkit-animation-delay: 0.4s;
+         animation-delay: 0.4s;
+       }
+       .four {
+         border-radius: 0 0 100% 0;
+         -webkit-transform-origin: top left;
+         -ms-transform-origin: top left;
+         transform-origin: top left;
+         -webkit-animation-delay: 0.6s;
+         animation-delay: 0.6s;
+       }
+    }
+}
+ 
+
+ 
+ @-webkit-keyframes animate {
+   to {
+     -webkit-transform: scale(2.2);
+     transform: scale(2.2);
+   }
+ }
+ 
+ @keyframes animate {
+   to {
+     -webkit-transform: scale(2.2);
+     transform: scale(2.2);
+   }
+ }
+ @-webkit-keyframes rotate {
+   to {
+     -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+   }
+ }
+ @keyframes rotate {
+   to {
+     -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+   }
+ }
+ 
