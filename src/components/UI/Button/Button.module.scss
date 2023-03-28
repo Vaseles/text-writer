@@ -8,10 +8,13 @@
    transition: all .3s linear;
    border: none;
    height: 100%;
+   border: 4px solid $blue;
    
    &:hover {
-      background-color: $white;
+      background-color: $black;
       color: $darkblue;
       cursor: pointer;
+      border: none;
+      padding: 14px 22px;
    }
 }

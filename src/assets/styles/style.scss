@@ -8,9 +8,21 @@
    outline: none;
 }
 body {
-   background-color: $black;
-   color: $white;
    font-size: 18px;
    font-family: monospace;
    overflow-x: hidden;
+}
+
+::selection {
+   background-color: $blue;
+   color: $black;
+}
+
+::-webkit-scrollbar {
+   background-color: transparent;
+   width: 10px;
+}
+::-webkit-scrollbar-thumb {
+   background-color: $blue;
+   border-radius: 10px;
 }
